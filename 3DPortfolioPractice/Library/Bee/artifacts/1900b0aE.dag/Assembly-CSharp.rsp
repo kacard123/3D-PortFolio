@@ -356,11 +356,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/03. Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
 "Assets/05. Scripts/DoorOpenFirst.cs"
-"Assets/05. Scripts/GlobalAmmo.cs"
-"Assets/05. Scripts/GunAmmoPickUp.cs"
-"Assets/05. Scripts/HandgunFire.cs"
-"Assets/05. Scripts/HandgunPickup.cs"
-"Assets/05. Scripts/PlayerWalkSound.cs"
+"Assets/05. Scripts/PlayerCasting.cs"
+"Assets/05. Scripts/Weapon/GlobalAmmo.cs"
+"Assets/05. Scripts/Weapon/GunAmmoPickUp.cs"
+"Assets/05. Scripts/Weapon/HandgunFire.cs"
+"Assets/05. Scripts/Weapon/HandgunPickup.cs"
+"Assets/05. Scripts/Weapon/PlayerWalkSound.cs"
 "Assets/07. Objects/Gun/Modern Guns - Handgun/_Demo Assets/SimpleShoot.cs"
 -langversion:9.0
 
