@@ -57,6 +57,7 @@ public class FirstPersonController : MonoBehaviour
 
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
+    public float runSpeed = 15f;
     public float maxVelocityChange = 10f;
 
     // Internal Variables
@@ -382,6 +383,19 @@ public class FirstPersonController : MonoBehaviour
             else
             {
                 isWalking = false;
+            }
+
+            //Vector3 targetVelocityDouble = new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime * runSpeed, 0, Input.GetAxis("Vertical") * Time.deltaTime * runSpeed);
+
+            if (Input.GetKey(KeyCode.LeftShift)) // 왼쪽 shift 키를 누르면
+            {
+                Vector3 targetVelocityDouble = new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime * runSpeed, 0, Input.GetAxis("Vertical") * Time.deltaTime * runSpeed);
+                // 오브젝트의 속도 값이 방향키를 누를 때 걷는 속도가 달리는 속도로 변한다.
+                walkSpeed = runSpeed;
+            }
+            else
+            {
+                walkSpeed = 5f; // shift키를 누르지 않는다면 걷는 속도는 5f로 되돌아온다
             }
 
             // All movement calculations shile sprint is active
