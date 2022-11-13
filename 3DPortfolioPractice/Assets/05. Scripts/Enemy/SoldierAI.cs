@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoldierAI : MonoBehaviour
 {
+
     public string hitTag; // Soldier오브젝트가 겨냥할 오브젝트의 태그값
     public bool lookingAtplayer = false; 
     public GameObject theSoldier;
@@ -38,7 +39,7 @@ public class SoldierAI : MonoBehaviour
             theSoldier.GetComponent<Animator>().Play("FiringRifle", -1, 0); 
             fireSound.Play(); // 총을 쏠 때 들리는 사운드 재생
             lookingAtplayer  = true; // 플레이어를 향해있을 때 bool 값이 true로 변함
-            GlobalHealth.healthValue -= 3; // 적의 총 한번 맞으면 플레이어의 에너지 수치가 3씩 깎인다
+            GlobalHealth.internalHealth -= 3f; // 적의 총 한번 맞으면 플레이어의 에너지 수치가 3씩 깎인다
             hurtFlash.SetActive(true); // 피격시 발동되는 UI 활성화
             yield return new WaitForSeconds(0.2f); // 0.2초 후에
             hurtFlash.SetActive(false); // 피격시 발동되는 UI를 비활성화
