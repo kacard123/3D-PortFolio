@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38931534, g: 0.40366465, b: 0.39327136, a: 1}
+  m_IndirectSpecularColor: {r: 0.38931486, g: 0.40366438, b: 0.3932709, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6018,6 +6018,8 @@ MonoBehaviour:
   animator: {fileID: 626458226}
   scopeOverlay: {fileID: 101641535}
   weaponCamera: {fileID: 2073046334}
+  playerCamera: {fileID: 4459864850647045110}
+  scopedFOV: 15
 --- !u!1001 &630506439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12985,11 +12987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c4bf6ac7b934e84996ec899ee0fc016, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.5284615
+      value: 5.528454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c4bf6ac7b934e84996ec899ee0fc016, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.5284677
+      value: 5.528476
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c4bf6ac7b934e84996ec899ee0fc016, type: 3}
       propertyPath: m_LocalScale.z
@@ -12997,7 +12999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c4bf6ac7b934e84996ec899ee0fc016, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49999997
+      value: 0.49999943
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6c4bf6ac7b934e84996ec899ee0fc016, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20367,7 +20369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073046334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20968,7 +20970,7 @@ MonoBehaviour:
   crosshair: 1
   crosshairImage: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
-  enableZoom: 1
+  enableZoom: 0
   holdToZoom: 1
   zoomKey: 324
   zoomFOV: 30
@@ -21277,7 +21279,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.02
   far clip plane: 1000
   field of view: 60
   orthographic: 0
