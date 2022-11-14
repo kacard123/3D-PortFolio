@@ -21,4 +21,6 @@ public class HandgunPickup : MonoBehaviour
         pickUpDisplay.SetActive(true); // 텍스트 게임 오브젝트 활성화
     }
 
+
+
 }
