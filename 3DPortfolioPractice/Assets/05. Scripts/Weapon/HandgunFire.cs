@@ -10,7 +10,7 @@ public class HandgunFire : MonoBehaviour
     public bool isFiring = false; // 총이 발사되지 않도록 false값으로 초기화
     public AudioSource emptySound;
     public float targetDistance;
-    public int damageAmount = 5;
+    public int damageAmount = 3;
 
     void Update()
     {

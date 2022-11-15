@@ -15,6 +15,12 @@ public class GunAmmoPickUp : MonoBehaviour
     {
         fakeAmmoClip.SetActive(false); // 가짜 탄약 팩 비활성화
         ammoPickupSound.Play(); // 탄약 팩을 들어올릴 시에 들리는 소리 활성화
+        if(pickUpDisplay ==null)
+        {
+            gameObject.GetComponent<GlobalRifleAmmo>().enabled = false;
+
+        }
+        // gameObject.GetComponent<GlobalRifleAmmo>().enabled = false;
         GlobalAmmo.gunAmmo += 10; // 탄약 팩 안에 든 총알 수
         pickUpDisplay.SetActive(false); // 텍스트 게임오브젝트 비활성화
         GetComponent<BoxCollider>().enabled = false;
