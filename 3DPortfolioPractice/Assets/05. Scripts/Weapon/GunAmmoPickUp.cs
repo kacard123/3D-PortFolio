@@ -7,6 +7,7 @@ using TMPro;
 
 public class GunAmmoPickUp : MonoBehaviour
 {
+    public GameObject gameObject;
     public GameObject fakeAmmoClip;
     public AudioSource ammoPickupSound;
     public GameObject pickUpDisplay; // 텍스트 관련 게임오브젝트 변수명 선언
@@ -15,13 +16,8 @@ public class GunAmmoPickUp : MonoBehaviour
     {
         fakeAmmoClip.SetActive(false); // 가짜 탄약 팩 비활성화
         ammoPickupSound.Play(); // 탄약 팩을 들어올릴 시에 들리는 소리 활성화
-        if(pickUpDisplay ==null)
-        {
-            gameObject.GetComponent<GlobalRifleAmmo>().enabled = false;
-
-        }
-        // gameObject.GetComponent<GlobalRifleAmmo>().enabled = false;
         GlobalAmmo.gunAmmo += 10; // 탄약 팩 안에 든 총알 수
+        gameObject.GetComponent<GlobalRifleAmmo>().enabled = false;
         pickUpDisplay.SetActive(false); // 텍스트 게임오브젝트 비활성화
         GetComponent<BoxCollider>().enabled = false;
         pickUpDisplay.GetComponent<TextMeshProUGUI>().text = "CLIP OF BULLETS"; // 텍스트 메쉬프로 컴포넌트를 가져와 "CLIP OF BULLETS" 나타내도록 설정

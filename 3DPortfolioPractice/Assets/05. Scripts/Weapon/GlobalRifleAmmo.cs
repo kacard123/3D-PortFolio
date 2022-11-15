@@ -9,7 +9,6 @@ public class GlobalRifleAmmo : MonoBehaviour
     public static int rifleAmmo;
     public GameObject rifleammoDisplay;
 
-    bool AmmoValue = false;
 
     void Update()
     {
